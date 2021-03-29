@@ -48,7 +48,7 @@ fclose($fp);
 // no longer needed - feature removed from php
 // http://php.net/manual/en/function.get-magic-quotes-gpc.php
 // restore slashes in $fileType variable, if necessary
-//if(!get_magic_quotes_gpc()) { $fileName = addslashes($fileName); }
+if(!get_magic_quotes_gpc()) { $fileName = addslashes($fileName); }
 
 // connect to database
 $pdo = Database::connect();
